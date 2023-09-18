@@ -30,6 +30,21 @@
 		<input type="checkbox" id="conditions-checkbox" class="form-check-input" required>
 		<label for="conditions-checkbox">Agree to terms and conditions</label>
 		<button type="submit">Submit form</button>
+		<template>
+  <div>
+    <b-form-group
+      id="fieldset-1"
+      description="Let us know your name."
+      label="Enter your name"
+      label-for="first-name-input"
+      valid-feedback="Thank you!"
+      :invalid-feedback="invalidFeedback"
+      :state="state"
+    >
+      <b-form-input id="first-name-input" v-model="name" :state="state" trim></b-form-input>
+    </b-form-group>
+  </div>
+</template>
 	</form>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
